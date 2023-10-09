@@ -5,7 +5,7 @@ import { COLORS, MENU_ITEMS } from '@/components/constants';
 const initialState = {
       [MENU_ITEMS.PENCIL]:{
         color: COLORS.BLACK,
-        size:3
+        size:3,
       },
       [MENU_ITEMS.ERASER]:{
         color: COLORS.WHITE,
@@ -26,7 +26,7 @@ const toolboxSlice = createSlice({
               state[action.payload.item].color = action.payload.color
         },
         changeBrushSize: (state,action) =>{
-            state[action.payload.item].color = action.payload.size
+            state[action.payload.item].size = action.payload.size
 
         }
     }
